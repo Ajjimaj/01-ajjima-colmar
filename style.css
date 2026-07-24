@@ -86,6 +86,7 @@ body {
   margin-bottom: 0 24px var(--spacing-xl);
   overflow: hidden;
 }
+
 .box-img {
   width: 100%;
   height: 100%;
@@ -150,7 +151,7 @@ body {
   margin: 0 24px var(--spacing-xl);
 }
 
-.featued-column {
+.featured-column {
   width: 60%;
   background-color: #fff;
   border: 1px solid #e0e0e0;
@@ -253,7 +254,7 @@ body {
   text-decoration: none;
 }
 
-.read-more::hovor {
+.read-more:hovor {
   text-decoration: underline;
 }
 
@@ -310,11 +311,6 @@ body {
 
 .thesis-section {
   margin-top: var(--spacing-xl);
-}
-
-.section-container {
-  display: flex;
-  gap: var(--spacing-xl);
 }
 
 .section-title {
@@ -378,7 +374,6 @@ thesis-box-img img {
 }
 
 .thesis-card-content {
-  /* align-items: center; */
   width: 65%;
 }
 
@@ -425,4 +420,183 @@ thesis-box-img img {
 .mobile-icon {
   display: none;
 }
-/* responsive */
+
+@media (max-width: 768px) {
+  /* 1. Header Section */
+  .header {
+    height: 64px;
+    padding: 0 var(--spacing-md); /* 16px */
+    margin-bottom: 0; /* Reset desktop margin-bottom of header on mobile */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0;
+  }
+
+  /* Hide brand text and desktop nav links */
+  .logo-text,
+  .logo-dark,
+  .nav-menu a.desktop-link {
+    display: none;
+  }
+
+  /* Show mobile icons */
+  .nav-menu a.mobile-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-icon img {
+    height: 24px;
+    width: auto;
+    display: block;
+  }
+
+  /* 2. Hero Section */
+  .hero-section {
+    flex-direction: column;
+    margin: 0; /* Reset margins on mobile */
+    border-radius: 0;
+  }
+
+  .box-hero-img {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .hero-content {
+    width: 100%;
+    min-height: auto;
+    padding: 32px 16px; /* Top/Bottom 32px, Left/Right 16px */
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+    margin-bottom: 32px; /* Spacing between title and paragraph */
+  }
+
+  .hero-content p {
+    margin-bottom: 24px; /* Spacing between paragraph and button */
+  }
+
+  .btn-start {
+    width: 100%; /* Stretches to full width on mobile */
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /* 3. Main Content Section (Featured & Sidebar) */
+  .main-container {
+    flex-direction: column;
+    margin: 0;
+    gap: 0;
+  }
+
+  /* Hide left featured column on mobile */
+  .featured-column {
+    display: none;
+  }
+
+  .side-column {
+    width: 100%;
+    padding: 32px 16px; /* 32px bottom gap, 16px sides */
+    gap: 64px; /* Labeled 64px gap between event cards */
+  }
+
+  .event-card {
+    flex-direction: column;
+    padding: 16px; /* Labeled 16px padding top/left */
+    align-items: flex-start;
+  }
+
+  .event-box-img {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 16px; /* Labeled 16px between image and title */
+  }
+
+  .event-content {
+    width: 100%;
+  }
+
+  /* 4. Start Learning Section */
+  .courses-section {
+    margin-top: 0;
+    padding: 32px 16px; /* Spacing top 32px, padding left/right 16px */
+    background-color: #ffffff;
+  }
+
+  .courses-section .section-title {
+    margin-bottom: 16px; /* Labeled 16px below Start learning title */
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr;
+    gap: 8px; /* Labeled 8px gap between cards */
+  }
+
+  .course-card {
+    background-color: var(--bg-light); /* Grey background for cards on mobile */
+    border: none;
+    border-radius: 0;
+  }
+
+  /* Hide course images, tags, and description text on mobile */
+  .course-box,
+  .course-content .course-tag,
+  .course-content p {
+    display: none;
+  }
+
+  .course-content {
+    padding: 16px; /* Labeled 16px padding-top/left */
+  }
+
+  .course-content h3 {
+    font-size: 1.1rem;
+    margin: 0;
+  }
+
+  /* 5. Thesis Section */
+  .thesis-section {
+    margin: 0;
+    padding: 32px 16px 24px 16px; /* Top 32px, sides 16px, bottom 24px before footer */
+  }
+
+  .thesis-section .section-title {
+    margin-bottom: 16px; /* Labeled 16px below Thesis exhibits title */
+  }
+
+  .thesis-container {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .thesis-left {
+    width: 100%;
+  }
+
+  /* Hide video description/info and right column completely on mobile */
+  .thesis-left-body,
+  .thesis-right {
+    display: none;
+  }
+
+  /* 6. Footer Section */
+  .footer {
+    margin-top: 0;
+    padding: 16px; /* Labeled 16px top/bottom, and 16px sides */
+  }
+
+  .footer-links {
+    display: none; /* Hide terms and privacy links on mobile */
+  }
+}
