@@ -16,8 +16,8 @@
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #c0b9b9;
-  color: var(--text-dark); /* สีของตัวอักษรบนหน้าเว็บ */
+  background-color: #ffffff;
+  color: black; /* สีของตัวอักษรบนหน้าเว็บ */
   line-height: 1.6; /* ความสูงของตัวอักษร */
 }
 
@@ -28,7 +28,7 @@ body {
   height: 64px;
   padding: 0 var(--spacing-lg);
   background-color: white;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid e0e0e0;
   margin-bottom: var(--spacing-xl);
 }
 
@@ -51,7 +51,7 @@ body {
 }
 
 .logo-dark {
-  color: rgb(197, 197, 197);
+  color: #b8b4b4;
   font-weight: normal;
   margin-left: -7px;
 }
@@ -82,8 +82,8 @@ body {
 .hero-section {
   display: flex;
   background-color: var(--bg-light);
-  border-radius: 6px;
-  margin-bottom: var(--spacing-md);
+  border-radius: 0;
+  margin-bottom: 0 24px var(--spacing-xl);
   overflow: hidden;
 }
 .box-img {
@@ -101,15 +101,26 @@ body {
 .hero-content {
   width: 40%;
   min-height: 250px;
-  background-color: #f2ecec;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-left: 24px;
+  padding-right: 24px;
 }
 
 .hero-content h1 {
   margin-bottom: 24px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #333333;
+}
+
+.hero-content p {
+  color: #555555;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0;
 }
 
 .btn-start {
@@ -118,9 +129,11 @@ body {
   align-self: flex-start;
   background-color: #333333;
   color: white;
-  padding: 8px 16px;
+  padding: 12px 24px;
   border: none;
   cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .main-container {
@@ -187,7 +200,7 @@ body {
 }
 
 .even-card.active {
-  background-color: #f46464;
+  background-color: #6090b2;
   border-color: #c0b9b9;
 }
 
@@ -308,7 +321,8 @@ body {
 }
 
 .thesis-left h3 {
-  margin-top: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+  margin-bottom: 8px;
 }
 
 .thesis-left p {
@@ -325,19 +339,51 @@ body {
 
 .thesis-card {
   display: flex;
-  gap: var(--spacing-sm);
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 16px;
+  /* gap: var(--spacing-sm); */
+  align-items: center;
+}
+
+thesis-box-img {
+  width: 35%;
+  flex-shrink: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-right: var(--spacing-md);
+}
+
+thesis-box-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
 }
 
 .thesis-card-content {
-  align-items: center;
+  /* align-items: center; */
+  width: 65%;
+}
+
+.thesis-card-content h4 {
+  font-size: 1rem;
+  margin: 0 0 8px 0;
+}
+
+.thesis-card-content p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
 }
 
 .footer {
   margin-top: var(--spacing-xl);
   border-top: 1px solid #ddd;
-  padding: var(--spacing-lg) 0;
+  padding: var(--spacing-md) var(--spacing-lg);
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .footer p {
@@ -358,3 +404,5 @@ body {
 .footer-links a:hover {
   color: blue;
 }
+
+/* responsive */
